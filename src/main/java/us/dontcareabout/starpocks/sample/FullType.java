@@ -18,4 +18,11 @@ public class FullType {
 	protected static Object staticProtected;
 	static Object staticPackage;
 	private static Object staticPrivate;
+
+	public FullType(String[] args) {}
+	public FullType(Object qoo, String... args) {}
+	public FullType() {}
+	protected FullType(short value) {}
+	FullType(int value) {}
+	private FullType(long value) {}
 }
