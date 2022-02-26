@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 
 import us.dontcareabout.starpocks.util.MermaidUtil;
 
-public class CtorWriter implements Writer<Constructor<?>> {
+public class CtorWriter implements ICtorWriter {
 	private ParameterWriter parameterWriter = new ParameterWriter();
 
 	@Override
