@@ -60,19 +60,19 @@ public class ClassUtil {
 	}
 
 	public static List<Method> publicMethod(Class<?> clazz, boolean isStatic) {
-		return method(clazz.getDeclaredMethods(), false, publicFilter);
+		return method(clazz.getDeclaredMethods(), isStatic, publicFilter);
 	}
 
 	public static List<Method> protectedMethod(Class<?> clazz, boolean isStatic) {
-		return method(clazz.getDeclaredMethods(), false, protectedFilter);
+		return method(clazz.getDeclaredMethods(), isStatic, protectedFilter);
 	}
 
 	public static List<Method> packageMethod(Class<?> clazz, boolean isStatic) {
-		return method(clazz.getDeclaredMethods(), false, packageFilter);
+		return method(clazz.getDeclaredMethods(), isStatic, packageFilter);
 	}
 
 	public static List<Method> privateMethod(Class<?> clazz, boolean isStatic) {
-		return method(clazz.getDeclaredMethods(), false, privateFilter);
+		return method(clazz.getDeclaredMethods(), isStatic, privateFilter);
 	}
 
 	//method / ctor 有 overload，所以無法像 field 一樣單純用名稱排序
