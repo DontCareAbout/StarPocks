@@ -1,8 +1,8 @@
-package us.dontcareabout.starpocks.writer;
+package us.dontcareabout.starpocks.mermaid;
 
 import java.lang.reflect.Constructor;
 
-import us.dontcareabout.starpocks.util.MermaidUtil;
+import us.dontcareabout.starpocks.writer.ICtorWriter;
 
 public class CtorWriter implements ICtorWriter {
 	private ParameterWriter parameterWriter = new ParameterWriter();

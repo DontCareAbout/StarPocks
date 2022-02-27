@@ -1,3 +1,5 @@
+package us.dontcareabout.starpocks.mermaid;
+
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,6 @@ import org.junit.jupiter.api.Test;
 
 import us.dontcareabout.starpocks.Relation;
 import us.dontcareabout.starpocks.Relation.Type;
-import us.dontcareabout.starpocks.writer.RelationWriter;
 
 public class RelationWriterTest {
 	@Test

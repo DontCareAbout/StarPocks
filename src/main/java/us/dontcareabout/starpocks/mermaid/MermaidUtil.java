@@ -1,4 +1,4 @@
-package us.dontcareabout.starpocks.util;
+package us.dontcareabout.starpocks.mermaid;
 
 import static java.lang.reflect.Modifier.isPrivate;
 import static java.lang.reflect.Modifier.isProtected;

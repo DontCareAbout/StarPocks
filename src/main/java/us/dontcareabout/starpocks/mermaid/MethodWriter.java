@@ -1,8 +1,8 @@
-package us.dontcareabout.starpocks.writer;
+package us.dontcareabout.starpocks.mermaid;
 
 import java.lang.reflect.Method;
 
-import us.dontcareabout.starpocks.util.MermaidUtil;
+import us.dontcareabout.starpocks.writer.IMethodWriter;
 
 public class MethodWriter implements IMethodWriter {
 	private ParameterWriter parameterWriter = new ParameterWriter();

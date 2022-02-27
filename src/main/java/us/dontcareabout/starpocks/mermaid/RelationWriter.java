@@ -1,6 +1,7 @@
-package us.dontcareabout.starpocks.writer;
+package us.dontcareabout.starpocks.mermaid;
 
 import us.dontcareabout.starpocks.Relation;
+import us.dontcareabout.starpocks.writer.IRelationWriter;
 
 public class RelationWriter implements IRelationWriter {
 	@Override

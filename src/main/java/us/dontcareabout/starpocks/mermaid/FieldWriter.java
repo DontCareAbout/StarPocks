@@ -1,8 +1,8 @@
-package us.dontcareabout.starpocks.writer;
+package us.dontcareabout.starpocks.mermaid;
 
 import java.lang.reflect.Field;
 
-import us.dontcareabout.starpocks.util.MermaidUtil;
+import us.dontcareabout.starpocks.writer.IFieldWriter;
 
 public class FieldWriter implements IFieldWriter {
 	@Override

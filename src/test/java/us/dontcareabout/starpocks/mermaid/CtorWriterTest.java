@@ -1,9 +1,10 @@
+package us.dontcareabout.starpocks.mermaid;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import us.dontcareabout.starpocks.sample.FullType;
 import us.dontcareabout.starpocks.util.ClassUtil;
-import us.dontcareabout.starpocks.writer.CtorWriter;
 
 public class CtorWriterTest {
 	final Class<FullType> clazz = FullType.class;

@@ -1,8 +1,10 @@
-package us.dontcareabout.starpocks.writer;
+package us.dontcareabout.starpocks.mermaid;
 
 import java.lang.reflect.Parameter;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import us.dontcareabout.starpocks.writer.IParameterWriter;
 
 public class ParameterWriter implements IParameterWriter {
 	@Override

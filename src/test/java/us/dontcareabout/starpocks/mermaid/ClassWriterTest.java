@@ -1,10 +1,11 @@
+package us.dontcareabout.starpocks.mermaid;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import us.dontcareabout.starpocks.sample.Abstract1;
 import us.dontcareabout.starpocks.sample.FullType;
 import us.dontcareabout.starpocks.sample.Interface1;
-import us.dontcareabout.starpocks.writer.ClassWriter;
 
 public class ClassWriterTest {
 	@Test

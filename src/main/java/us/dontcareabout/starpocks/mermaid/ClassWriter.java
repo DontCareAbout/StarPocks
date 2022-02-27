@@ -1,10 +1,14 @@
-package us.dontcareabout.starpocks.writer;
+package us.dontcareabout.starpocks.mermaid;
 
 import java.lang.reflect.Modifier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import us.dontcareabout.starpocks.util.ClassUtil;
+import us.dontcareabout.starpocks.writer.IClassWriter;
+import us.dontcareabout.starpocks.writer.ICtorWriter;
+import us.dontcareabout.starpocks.writer.IFieldWriter;
+import us.dontcareabout.starpocks.writer.IMethodWriter;
 
 public class ClassWriter implements IClassWriter {
 	private IFieldWriter fieldWriter = new FieldWriter();

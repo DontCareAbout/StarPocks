@@ -3,8 +3,6 @@ package us.dontcareabout.starpocks.mermaid;
 import java.util.List;
 
 import us.dontcareabout.starpocks.RelationAnalysis;
-import us.dontcareabout.starpocks.writer.ClassWriter;
-import us.dontcareabout.starpocks.writer.RelationWriter;
 
 public class ClassDiagram {
 	private ClassWriter classWriter = new ClassWriter();
