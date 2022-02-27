@@ -1,7 +1,9 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import us.dontcareabout.starpocks.sample.Abstract1;
 import us.dontcareabout.starpocks.sample.FullType;
+import us.dontcareabout.starpocks.sample.Interface1;
 import us.dontcareabout.starpocks.writer.ClassWriter;
 
 public class ClassWriterTest {
@@ -26,6 +28,24 @@ public class ClassWriterTest {
 			+ "\t+staticMethod(arg0:int)$ String\n"
 			+ "}",
 			writer.write(FullType.class)
+		);
+
+		Assertions.assertEquals(
+			"class Interface1 {\n"
+			+ "\t<<interface>>\n"
+			+ "\t+interface1()\n"
+			+ "}",
+			writer.write(Interface1.class)
+		);
+
+		Assertions.assertEquals(
+			"class Abstract1 {\n"
+			+ "\t<<abstract>>\n"
+			+ "\t+Abstract1()\n"
+			+ "\t+abstract1()\n"
+			+ "\t+interface1()\n"
+			+ "}",
+			writer.write(Abstract1.class)
 		);
 	}
 }

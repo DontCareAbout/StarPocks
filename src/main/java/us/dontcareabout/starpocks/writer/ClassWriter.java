@@ -1,5 +1,6 @@
 package us.dontcareabout.starpocks.writer;
 
+import java.lang.reflect.Modifier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,8 +25,21 @@ public class ClassWriter implements IClassWriter {
 		return result.toString();
 	}
 
+	protected String stereotype(Class<?> clazz) {
+		int modifier = clazz.getModifiers();
+		//isInterface 必須在 isAbstract 之前，因為 interface 一定符合 isAbstract
+		if (Modifier.isInterface(modifier)) {
+			return "<<interface>>\n";
+		}
+		if (Modifier.isAbstract(modifier)) {
+			return "<<abstract>>\n";
+		}
+		return "";
+	}
+
 	protected String member(Class<?> clazz) {
 		return Stream.of(
+			stereotype(clazz),
 			fieldWriter.write(ClassUtil.publicField(clazz, true)),
 			fieldWriter.write(ClassUtil.publicField(clazz, false)),
 			ctorWriter.write(ClassUtil.publicCtor(clazz)),
