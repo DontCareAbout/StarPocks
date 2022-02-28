@@ -1,5 +1,6 @@
 package us.dontcareabout.starpocks.mermaid;
 
+import java.util.Arrays;
 import java.util.List;
 
 import us.dontcareabout.starpocks.RelationAnalysis;
@@ -7,6 +8,10 @@ import us.dontcareabout.starpocks.RelationAnalysis;
 public class ClassDiagram {
 	private ClassWriter classWriter = new ClassWriter();
 	private RelationWriter relationWriter = new RelationWriter();
+
+	public String write(Class<?>... clazz) {
+		return write(Arrays.asList(clazz));
+	}
 
 	public String write(List<Class<?>> clazzList) {
 		RelationAnalysis ra = new RelationAnalysis(clazzList);
