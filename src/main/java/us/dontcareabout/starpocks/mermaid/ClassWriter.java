@@ -1,6 +1,5 @@
 package us.dontcareabout.starpocks.mermaid;
 
-import java.lang.reflect.Modifier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -9,8 +8,10 @@ import us.dontcareabout.starpocks.writer.IClassWriter;
 import us.dontcareabout.starpocks.writer.ICtorWriter;
 import us.dontcareabout.starpocks.writer.IFieldWriter;
 import us.dontcareabout.starpocks.writer.IMethodWriter;
+import us.dontcareabout.starpocks.writer.IStereotypeWriter;
 
 public class ClassWriter implements IClassWriter {
+	private IStereotypeWriter stereotypeWriter = new StereotypeWriter();
 	private IFieldWriter fieldWriter = new FieldWriter();
 	private ICtorWriter ctorWriter = new CtorWriter();
 	private IMethodWriter methodWriter = new MethodWriter();
@@ -29,21 +30,9 @@ public class ClassWriter implements IClassWriter {
 		return result.toString();
 	}
 
-	protected String stereotype(Class<?> clazz) {
-		int modifier = clazz.getModifiers();
-		//isInterface 必須在 isAbstract 之前，因為 interface 一定符合 isAbstract
-		if (Modifier.isInterface(modifier)) {
-			return "<<interface>>\n";
-		}
-		if (Modifier.isAbstract(modifier)) {
-			return "<<abstract>>\n";
-		}
-		return "";
-	}
-
 	protected String member(Class<?> clazz) {
 		return Stream.of(
-			stereotype(clazz),
+			stereotypeWriter.write(clazz),
 			fieldWriter.write(ClassUtil.publicField(clazz, true)),
 			fieldWriter.write(ClassUtil.publicField(clazz, false)),
 			ctorWriter.write(ClassUtil.publicCtor(clazz)),
