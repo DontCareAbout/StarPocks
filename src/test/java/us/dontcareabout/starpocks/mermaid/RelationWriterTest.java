@@ -15,13 +15,13 @@ public class RelationWriterTest {
 	void test() {
 		RelationWriter writer = new RelationWriter();
 		Assertions.assertEquals(
-			"AbstractList <|-- ArrayList",
+			"java.util.AbstractList <|-- java.util.ArrayList",
 			writer.write(
 				new Relation(ArrayList.class, Type.extend, AbstractList.class)
 			)
 		);
 		Assertions.assertEquals(
-			"List <|.. ArrayList",
+			"java.util.List <|.. java.util.ArrayList",
 			writer.write(
 				new Relation(ArrayList.class, Type.implement, List.class)
 			)
