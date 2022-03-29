@@ -13,7 +13,7 @@ public class ClassWriterTest {
 		ClassWriter writer = new ClassWriter();
 
 		Assertions.assertEquals(
-			"class FullType {\n"
+			"class us.dontcareabout.starpocks.sample.FullType {\n"
 			+ "\t+Object staticPublic$\n"
 			+ "\t+Byte public_Byte\n"
 			+ "\t+byte public_byte\n"
@@ -32,7 +32,7 @@ public class ClassWriterTest {
 		);
 
 		Assertions.assertEquals(
-			"class Interface1 {\n"
+			"class us.dontcareabout.starpocks.sample.Interface1 {\n"
 			+ "\t<<interface>>\n"
 			+ "\t+interface1()\n"
 			+ "}",
@@ -40,7 +40,7 @@ public class ClassWriterTest {
 		);
 
 		Assertions.assertEquals(
-			"class Abstract1 {\n"
+			"class us.dontcareabout.starpocks.sample.Abstract1 {\n"
 			+ "\t<<abstract>>\n"
 			+ "\t+Abstract1()\n"
 			+ "\t+abstract1()\n"

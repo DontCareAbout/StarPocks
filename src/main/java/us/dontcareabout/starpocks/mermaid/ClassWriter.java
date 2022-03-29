@@ -19,7 +19,7 @@ public class ClassWriter implements IClassWriter {
 	@Override
 	public String write(Class<?> clazz) {
 		StringBuilder result = new StringBuilder("class ");
-		result.append(clazz.getSimpleName());
+		result.append(clazz.getName());
 		result.append(" {\n");
 		result.append(
 			Stream.of(member(clazz).split("\n"))

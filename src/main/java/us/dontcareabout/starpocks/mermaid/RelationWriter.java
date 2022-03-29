@@ -8,12 +8,12 @@ public class RelationWriter implements IRelationWriter {
 	public String write(Relation r) {
 		//因為 Mermaid 會把左方的 class 擺在上面
 		//所以把 Relation.object（super class）擺在左邊
-		StringBuilder result = new StringBuilder(r.object.getSimpleName());
+		StringBuilder result = new StringBuilder(r.object.getName());
 		switch(r.type) {
 		case extend: result.append(" <|-- "); break;
 		case implement: result.append(" <|.. "); break;
 		}
-		result.append(r.subject.getSimpleName());
+		result.append(r.subject.getName());
 		return result.toString();
 	}
 }
